@@ -1,4 +1,3 @@
-// @generated: @expo/next-adapter@2.1.59
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Link } from "@react-navigation/native";
@@ -15,15 +14,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const Home = () => {
+const Details = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home page</Text>
-      <RootLink to="/details">
-        Go to Details
+      <Text style={styles.text}>Details page</Text>
+      <RootLink to="/">
+        Go to Home
       </RootLink>
     </View>
   );
 };
 
-export default Home;
+export default Details;
