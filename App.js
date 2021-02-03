@@ -1,11 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from "./pages";
 import Details from "./pages/details";
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
   const linking = {
@@ -19,10 +19,10 @@ const App = () => {
 
   return (
     <NavigationContainer linking={linking}>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Details" component={Details} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Home">
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Details" component={Details} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
