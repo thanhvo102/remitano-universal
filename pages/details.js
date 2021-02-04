@@ -1,26 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import RootLink from "components/shared/root-link";
+import { Text } from "react-native";
+import RootHeader from "components/header/index";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  text: {
-    fontSize: 16,
-  },
-});
-
-const Details = () => {
+const Details = ({ navigation }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Details page</Text>
-      <RootLink to="/">
-        Go to Home
-      </RootLink>
-    </View>
+    <>
+      <RootHeader {...{ navigation }} />
+      <Text>Details page</Text>
+    </>
   );
 };
 

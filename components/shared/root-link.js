@@ -13,8 +13,8 @@ const RootLink = ({ to, action, children, ...rest }) => {
 
   if (Platform.OS === "web") {
     return (
-      <NextLink href={to}>
-        <Text accessibilityRole="link">
+      <NextLink href={to} {...rest}>
+        <Text accessibilityRole="link" {...rest}>
           {children}
         </Text>
       </NextLink>
