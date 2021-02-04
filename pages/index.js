@@ -6,7 +6,8 @@ import {
   View,
   SafeAreaView,
 } from "react-native";
-import RootLink from "./shared/root-link";
+import { FontAwesome } from "@expo/vector-icons";
+import RootLink from "components/shared/root-link";
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: "#41225D",
     height: 50,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
   },
   logo: {
     textTransform: "uppercase",
@@ -33,18 +34,23 @@ const styles = StyleSheet.create({
   }
 });
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
+        <FontAwesome.Button
+          name="bars"
+          backgroundColor="#41225D"
+          onPress={() => navigation.toggleDrawer()}
+        />
         <Text style={styles.logo}>
           Remitano
         </Text>
-        <View style={styles.menu}>
-          <RootLink to="/details">
-            Go to Details
-          </RootLink>
-        </View>
+        <FontAwesome.Button
+          name="bell"
+          backgroundColor="#41225D"
+          onPress={() => navigation.toggleDrawer()}
+        />
       </View>
     </SafeAreaView>
   );

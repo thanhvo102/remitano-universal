@@ -19,7 +19,6 @@ const withTabs = (Component) => {
   );
 };
 
-
 const App = () => {
   const linking = {
     config: {

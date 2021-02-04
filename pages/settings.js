@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import RootLink from "./shared/root-link";
+import RootLink from "components/shared/root-link";
 
 const styles = StyleSheet.create({
   container: {
