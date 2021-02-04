@@ -1,28 +1,52 @@
 // @generated: @expo/next-adapter@2.1.59
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Link } from "@react-navigation/native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+} from "react-native";
 import RootLink from "./shared/root-link";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
   },
   text: {
     fontSize: 16,
   },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "#41225D",
+    height: 50,
+    paddingHorizontal: 20,
+  },
+  logo: {
+    textTransform: "uppercase",
+    color: "#FFF",
+    fontSize: 24,
+  },
+  menu: {
+    color: "#FFF",
+  }
 });
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home page</Text>
-      <RootLink to="/details">
-        Go to Details
-      </RootLink>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.logo}>
+          Remitano
+        </Text>
+        <View style={styles.menu}>
+          <RootLink to="/details">
+            Go to Details
+          </RootLink>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 };
 

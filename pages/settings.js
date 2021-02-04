@@ -13,10 +13,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Details = () => {
+const Settings = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Details page</Text>
+      <Text style={styles.text}>Settings page</Text>
       <RootLink to="/">
         Go to Home
       </RootLink>
@@ -24,4 +24,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default Settings;
