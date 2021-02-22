@@ -22,5 +22,5 @@ yarn next dev
 - We can remove `Next.js` because:
   - it doesn't bring benefits to mobile app, only SSR for web
   - it changes the way to route in the app, compared to `react-first-router`
-  - combining expo with next.js are troublesome and risky due to the lack of documentation
+  - combining Expo with Next.js is troublesome and risky due to the lack of documentation
   - (minor) we can use `expo start` for web on development
